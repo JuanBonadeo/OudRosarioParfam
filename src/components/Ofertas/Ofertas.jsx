@@ -66,7 +66,7 @@ export const Ofertas = () => {
     const fetchProducts = async () => {
         setLoading(true)
         try {
-            const productsRef = query(collection(db, 'products'), where('descuento', '>', 0))
+            const productsRef = query(collection(db, 'products'), where('destacado', '==', true))
             const snapShot = await getDocs(productsRef);
             const productosAdapted = snapShot.docs.map((doc) => ({
                 id: doc.id,
@@ -88,7 +88,7 @@ export const Ofertas = () => {
 
     return (
         <div className="sliderContainer">
-            <h2>Ofertas</h2>
+            <h2>Destacados</h2>
             {loading
                 ? <Loader />
                 :
