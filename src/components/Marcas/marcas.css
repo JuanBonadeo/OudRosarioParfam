@@ -1,0 +1,30 @@
+.sliderContainerMarcas {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    color: #000;
+    
+  }
+  
+  .slidesMarcas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .marcaCard {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .marcaLogo {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .sliderContainerMarcas h2 {
+    font-size: 2em;
+    font-weight: 700;
+  }
+  

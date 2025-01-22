@@ -1,0 +1,36 @@
+.sliderContainer{
+    margin: 3em auto;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    
+}
+.sliderContainer h2{
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #E3B442;
+}
+
+.slides{
+    margin: auto;
+    width: 88%;
+    padding-top: 2em;
+}
+
+
+
+
+@media screen and (max-width: 568px) {
+    .slides{
+
+        width: 85%;
+        padding-top: 2em;
+        
+    }
+    .sliderContainer h2{
+        font-size: 2em;
+    }
+}

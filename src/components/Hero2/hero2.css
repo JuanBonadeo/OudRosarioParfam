@@ -1,0 +1,80 @@
+.CombosContainer{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 2em auto;
+    gap: 3em;
+    
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    
+}
+.CombosContainer img{
+    width: 40%;
+    height: 40%;
+}
+.CombosContainer h2{
+    font-size: 2.1em;
+    font-weight: 500;
+    text-align: center;
+    color: #E3B442;
+}
+.CombosContainer p{
+    font-size: 1.3em;
+    text-align: center;
+}
+@media screen and (max-width: 768px){
+    .CombosContainer{
+        width: 90%;
+    }.CombosContainer h2{
+        font-size: 1.5em;
+    }.CombosContainer p{
+        font-size: .8em;
+    }
+    
+}
+@media screen and (max-width: 568px){
+    .CombosContainer{
+        width: 95%;
+        margin: 2em auto;
+    }.info{
+        width: 70%;
+    }
+    .CombosContainer h2{
+        font-size: 1.4em;
+    }.CombosContainer p{
+        font-size: .8em;
+    }
+    
+}
+@media screen and (max-width: 480px){
+    .hero2Mobile{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }.hero2Mobile img{
+        width: 60%;
+        margin-bottom: 2em;
+
+    }
+    .hero2Mobile h2{
+        font-size: 1.5em;
+        text-align: center;
+        margin: 0;
+    }.hero2Mobile p{
+        font-size: .8em;
+        text-align: center;
+    }
+    
+    
+}
+
+
+/* mobile */

@@ -1,0 +1,7 @@
+export * from './Button/Button'
+export * from './Footer/Footer'
+export * from './Loader/Loader'
+export * from './Logo/Logo'
+export * from './NavBar/NavBar'
+export * from './UpButton/UpButton'
+export * from './WspButton/WspButton'

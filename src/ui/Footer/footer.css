@@ -1,0 +1,86 @@
+footer{
+    padding: 1em 0;
+    margin-top: 5em;
+    background-color: #000000;
+    
+}
+.footer1{
+    height: 9em;
+    padding: 1em 0;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 1.5px #E3B442;
+    border-top: solid 1.5px #E3B442;
+    
+}.footer1 div {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    color: #222;
+}.footer1 div a{
+    color: #E3B442;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}.footer1 div a:hover{
+    color: rgb(193, 113, 34);
+    scale: 1.05;
+    transition: .3s;
+}
+.footer2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 2em 0;    
+}
+footer h5{
+    display: flex;
+    justify-content: center;
+    font-size: .8em;
+    padding-bottom: 1em;
+    color: #212121;
+}
+.footer2 svg{
+    width: 30px;
+    height: 30px;
+    color: #222;
+    cursor: pointer;
+}.footer2 svg:hover{
+    scale: 1.1;
+    transition: .3s;
+    color: #222;
+}
+.light{
+    height: 100px;
+    fill: #222;
+
+}
+
+
+@media (max-width: 1200px ){
+    .footer1{
+        height: 17em;
+        border-top: solid 1.5px #E3B442;
+        padding-bottom: 1em;
+
+        
+    }
+    .footer1 div {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+    .footer2{
+        gap: 1em;
+        
+    } 
+    footer h5{
+        font-size: .5em;
+    }
+}

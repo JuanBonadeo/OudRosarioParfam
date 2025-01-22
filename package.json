@@ -1,0 +1,51 @@
+{
+  "name": "oudrosario",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource-variable/cinzel": "^5.0.13",
+    "@fontsource-variable/nunito-sans": "^5.0.13",
+    "@fontsource/balthazar": "^5.0.12",
+    "@fontsource/merriweather": "^5.1.1",
+    "@fontsource/source-serif-pro": "^5.0.8",
+    "@mui/icons-material": "^5.15.11",
+    "@mui/material": "^5.15.11",
+    "@sweetalert2/theme-dark": "^5.0.16",
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
+    "firebase": "^10.10.0",
+    "framer-motion": "^11.0.24",
+    "install": "^0.13.0",
+    "npm": "^10.5.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.1",
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.8.1",
+    "react-router-dom": "^6.22.3",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.6.13",
+    "swiper": "^11.1.9"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.13.0",
+    "vite": "^6.0.3"
+  }
+}

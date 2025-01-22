@@ -1,0 +1,13 @@
+.App{
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+  background-color: primary;
+  background-color: #000000;
+}
+
+.contain{
+  margin-top: 4.9em;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}

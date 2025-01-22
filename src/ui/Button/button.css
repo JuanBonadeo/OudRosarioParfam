@@ -1,0 +1,50 @@
+.linkButton{
+    text-decoration: none;
+    width: 160px;
+    height: 50px;
+    height: min-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Button{
+    width: 160px;
+    height: 50px;
+    background-color: #0b0b0b; 
+    color: #E3B442;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    }
+.Button:hover{ 
+    background-color: #111;;
+    scale: 1.1;
+    transition: 0.3s; 
+   }
+
+
+@media screen and (max-width: 768px){
+    .Button{
+        font-size: 0.8em;
+        height: auto;
+        width: 120px;
+        }
+    }
+    
+
+@media (max-width: 500px ){
+    .Button{
+        font-size: 0.7em;
+        height: auto;
+        width: 90px;
+        }
+
+   }
+
+
+

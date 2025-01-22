@@ -1,0 +1,19 @@
+.adminContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+form{
+    color: rgb(255, 255, 255);
+    gap: 0.5em;
+}
+.form-group{
+    display: flex;
+    
+}
+.stock{
+    height: 1em;
+    width: 1em;
+}

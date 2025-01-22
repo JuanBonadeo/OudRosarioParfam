@@ -1,0 +1,32 @@
+.hero4 img{
+    width: 40%;
+    height: 40%;
+}
+
+.mobileView{
+    display: none;
+}
+.info h2{
+    font-size: 2.5em;
+    font-weight: 500;
+    color:#E3B442;;
+}
+.info p{
+    font-size: 1.3em;
+    color: #fff;
+}
+
+@media screen and (max-width: 568px) {
+    .mobileView{
+        display: block;
+    }
+    .desktopView{
+        display: none;
+    }
+    .hero3Mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
