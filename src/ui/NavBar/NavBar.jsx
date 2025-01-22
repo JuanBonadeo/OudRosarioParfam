@@ -19,8 +19,12 @@ export const  NavBar = () => {
   return (
     <Navbar expand="xl" className="navBar dark fixed-top" data-bs-theme="light" expanded={expanded}>
       <Container className='mobileContainerNav'>
-        
         <Logo className='logo'/>
+        <div className="mobileContainerNavRight">
+          <CartIcon className="mobile"/>
+          <Navbar.Toggle  aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
+        </div>
+        
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto navLinks" onSelect={closeNavbar}>
             <NavLink to="/" className={({ isActive }) => `primary ${isActive ? 'isActive' : "desactive"}`} onClick={closeNavbar}>Inicio</NavLink>
@@ -31,10 +35,7 @@ export const  NavBar = () => {
           </Nav>
         </Navbar.Collapse>
         
-        <div className="mobileContainerNavRight">
-          <CartIcon className="mobile"/>
-          <Navbar.Toggle  aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
-        </div>
+        
         <div className="desktopContainerNavRight">
           <CartIcon className="desktop" />
         </div>
