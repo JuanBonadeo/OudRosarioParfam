@@ -6,39 +6,28 @@ import Swal from 'sweetalert2';
 
 const uploadToCloudinary = async (file, category, productName) => {
     const formData = new FormData();
-    formData.append('file', file); 
-    formData.append('upload_preset', 'OudPerfumes'); 
-    formData.append('folder', `oud/products/${category}/${productName}`); 
+    formData.append('file', file);
+    formData.append('upload_preset', 'OudPerfumes');
+    formData.append('folder', `oud/products/${category}/${productName}`);
 
-    // Enviar la solicitud de carga
     const response = await fetch('https://api.cloudinary.com/v1_1/do36rxfoe/image/upload', {
         method: 'POST',
         body: formData,
     });
 
-    // Verificar si la carga fue exitosa
     if (!response.ok) {
         throw new Error('Error al subir la imagen a Cloudinary');
     }
 
-    // Obtener la URL de la imagen subida
     const data = await response.json();
-    return data.secure_url; // Devuelve la URL de la imagen subida
+    return data.secure_url;
 };
 
-
-
 export const Admin = () => {
-    const [image1, setImg1] = useState(null);
-    const [image2, setImg2] = useState(null);
-    const [image3, setImg3] = useState(null);
-    const [image4, setImg4] = useState(null);
+    const [images, setImages] = useState({ image1: null, image2: null, image3: null, image4: null });
+    const [previews, setPreviews] = useState({ imagePreview1: '', imagePreview2: '', imagePreview3: '', imagePreview4: '' });
     const [category, setCategory] = useState('hombre');
     const [nombre, setNombre] = useState('');
-    const [imagePreview1, setImagePreview1] = useState('');
-    const [imagePreview2, setImagePreview2] = useState('');
-    const [imagePreview3, setImagePreview3] = useState('');
-    const [imagePreview4, setImagePreview4] = useState('');
 
     const handleNombre = (e) => {
         setNombre(e.target.value);
@@ -48,19 +37,19 @@ export const Admin = () => {
         setCategory(e.target.value);
     };
 
-    const handleImageChange = (e, setImage, setPreview) => {
+    const handleImageChange = (e, imageKey, previewKey) => {
         const file = e.target.files[0];
-        setImage(file);
+        setImages((prev) => ({ ...prev, [imageKey]: file }));
         if (file) {
             const reader = new FileReader();
-            reader.onload = () => setPreview(reader.result);
+            reader.onload = () => setPreviews((prev) => ({ ...prev, [previewKey]: reader.result }));
             reader.readAsDataURL(file);
         }
     };
 
     const addProduct = async (e) => {
         e.preventDefault();
-    
+
         try {
             const precio = parseInt(document.getElementById('precio').value);
             const descuento = parseInt(document.getElementById('descuento').value);
@@ -68,14 +57,13 @@ export const Admin = () => {
             const destacados = document.getElementById('destacados').checked;
             const descripcion = document.getElementById('descripcion').value;
             const nombreProducto = nombre.toUpperCase().replace(/\s+/g, '-');
-    
-            // Subir imágenes a Cloudinary con carpetas dinámicas
+
             const imageUrls = await Promise.all(
-                [image1, image2, image3, image4].map((img) =>
+                [images.image1, images.image2, images.image3, images.image4].map((img) =>
                     img ? uploadToCloudinary(img, category, nombreProducto) : null
                 )
             );
-    
+
             const nuevoProducto = {
                 nombre,
                 precio,
@@ -89,10 +77,9 @@ export const Admin = () => {
                 img3: imageUrls[2],
                 img4: imageUrls[3],
             };
-    
-            // Guardar producto en Firestore
+
             await setDoc(doc(db, 'products', nombreProducto), nuevoProducto);
-    
+
             Swal.fire({
                 icon: 'success',
                 title: 'Producto agregado',
@@ -109,7 +96,6 @@ export const Admin = () => {
             });
         }
     };
-    
 
     return (
         <div className="adminContainer">
@@ -121,7 +107,7 @@ export const Admin = () => {
                     <label htmlFor="stock">Stock:</label>
                     <input type="checkbox" id="stock" name="stock" className="stock" />
                     <label htmlFor="destacados">Destacados:</label>
-                    <input type="checkbox" id="destacados" name="destacados" className='destacados' />
+                    <input type="checkbox" id="destacados" name="destacados" className="destacados" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="price">Precio:</label>
@@ -160,11 +146,11 @@ export const Admin = () => {
                             id={`img${num}`}
                             name={`imagen${num}`}
                             onChange={(e) =>
-                                handleImageChange(e, eval(`setImg${num}`), eval(`setImagePreview${num}`))
+                                handleImageChange(e, `image${num}`, `imagePreview${num}`)
                             }
                         />
-                        {eval(`imagePreview${num}`) && (
-                            <img src={eval(`imagePreview${num}`)} alt={`Preview ${num}`} style={{ maxWidth: '100px' }} />
+                        {previews[`imagePreview${num}`] && (
+                            <img src={previews[`imagePreview${num}`]} alt={`Preview ${num}`} style={{ maxWidth: '100px' }} />
                         )}
                     </div>
                 ))}
