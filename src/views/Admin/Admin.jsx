@@ -101,42 +101,58 @@ export const Admin = () => {
         <div className="adminContainer">
             <form className="adminForm" onSubmit={addProduct}>
                 <h1>Administrar Productos</h1>
-                <div className="form-group">
-                    <label htmlFor="name">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required value={nombre} onChange={handleNombre} />
-                    <label htmlFor="stock">Stock:</label>
-                    <input type="checkbox" id="stock" name="stock" className="stock" />
-                    <label htmlFor="destacados">Destacados:</label>
-                    <input type="checkbox" id="destacados" name="destacados" className="destacados" />
+                <div className="info1">
+                    <div className="form-group">
+                        <label htmlFor="name">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required value={nombre} onChange={handleNombre} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="stock">Stock:</label>
+                        <input type="checkbox" id="stock" name="stock" className="stock" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="destacados">Destacados:</label>
+                        <input type="checkbox" id="destacados" name="destacados" className="destacados" />
+                    </div>
+
                 </div>
-                <div className="form-group">
-                    <label htmlFor="price">Precio:</label>
-                    <input type="number" id="precio" name="precio" required />
-                    <label htmlFor="descuento">Descuento:</label>
-                    <select name="descuento" id="descuento" required>
-                        <option value="0">0%</option>
-                        <option value="5">5%</option>
-                        <option value="10">10%</option>
-                        <option value="15">15%</option>
-                        <option value="20">20%</option>
-                        <option value="25">25%</option>
-                        <option value="30">30%</option>
-                        <option value="35">35%</option>
-                        <option value="40">40%</option>
-                        <option value="45">45%</option>
-                        <option value="50">50%</option>
-                        <option value="60">60%</option>
-                    </select>
+                <div className="info1">
+                    <div className="form-group">
+                        <label htmlFor="price">Precio:</label>
+                        <input type="number" id="precio" name="precio" required />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="descuento">Descuento:</label>
+                        <select name="descuento" id="descuento" required>
+                            <option value="0">0%</option>
+                            <option value="5">5%</option>
+                            <option value="10">10%</option>
+                            <option value="15">15%</option>
+                            <option value="20">20%</option>
+                            <option value="25">25%</option>
+                            <option value="30">30%</option>
+                            <option value="35">35%</option>
+                            <option value="40">40%</option>
+                            <option value="45">45%</option>
+                            <option value="50">50%</option>
+                            <option value="60">60%</option>
+                        </select>
+                    </div>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="descripcion">Descripción:</label>
-                    <input type="text" id="descripcion" name="descripcion" />
-                    <label htmlFor="category">Categoría:</label>
-                    <select name="category" id="category" required value={category} onChange={handleCategory}>
-                        <option value="hombre">Hombre</option>
-                        <option value="mujer">Mujer</option>
-                        <option value="unisex">Unisex</option>
-                    </select>
+                <div className="info1">
+                    <div className="form-group">
+                        <label htmlFor="descripcion">Descripción:</label>
+                        <input type="text" id="descripcion" name="descripcion" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="category">Categoría:</label>
+                        <select name="category" id="category" required value={category} onChange={handleCategory}>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                            <option value="unisex">Unisex</option>
+                        </select>
+                    </div>
+
                 </div>
                 {[1, 2, 3, 4].map((num) => (
                     <div key={num}>
