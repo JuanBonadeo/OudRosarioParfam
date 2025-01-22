@@ -8,7 +8,7 @@ const categoriasImg = [
     },
     {
         name: 'Mujer',
-        url: 'https://res.cloudinary.com/do36rxfoe/image/upload/v1737500007/qri83gtebcyub5ibak6x.png',
+        url: 'https://res.cloudinary.com/do36rxfoe/image/upload/v1737565180/cztt76teu3avpxtjefit.png',
         to: 'categoria/mujer'
     },
     {

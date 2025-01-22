@@ -22,7 +22,7 @@ export const Hero2 = () => {
           Paso 3: Elegís la letra y los emojis que más te gusten!
 
         </p><br />
-        <Button label='Encargar' to='https://wa.me/5491165165979' />
+        <Button label='Encargar' to='https://wa.me/5493416845002' />
       </div>
       <img
         src='https://firebasestorage.googleapis.com/v0/b/mateardi-d8f70.appspot.com/o/WhatsApp%20Image%202024-08-04%20at%2020.28.59.jpeg?alt=media&token=59ce8fb3-2fb6-49ee-ac3c-306e3ba78153'

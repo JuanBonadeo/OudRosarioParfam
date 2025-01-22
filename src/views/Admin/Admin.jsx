@@ -33,7 +33,7 @@ export const Admin = () => {
     const [image2, setImg2] = useState(null);
     const [image3, setImg3] = useState(null);
     const [image4, setImg4] = useState(null);
-    const [category, setCategory] = useState('mates');
+    const [category, setCategory] = useState('hombre');
     const [nombre, setNombre] = useState('');
     const [imagePreview1, setImagePreview1] = useState('');
     const [imagePreview2, setImagePreview2] = useState('');
@@ -65,6 +65,7 @@ export const Admin = () => {
             const precio = parseInt(document.getElementById('precio').value);
             const descuento = parseInt(document.getElementById('descuento').value);
             const stock = document.getElementById('stock').checked;
+            const destacados = document.getElementById('destacados').checked;
             const descripcion = document.getElementById('descripcion').value;
             const nombreProducto = nombre.toUpperCase().replace(/\s+/g, '-');
     
@@ -80,6 +81,7 @@ export const Admin = () => {
                 precio,
                 descuento,
                 stock,
+                destacados,
                 categoria: category,
                 descripcion,
                 img1: imageUrls[0],
@@ -118,6 +120,8 @@ export const Admin = () => {
                     <input type="text" id="nombre" name="nombre" required value={nombre} onChange={handleNombre} />
                     <label htmlFor="stock">Stock:</label>
                     <input type="checkbox" id="stock" name="stock" className="stock" />
+                    <label htmlFor="destacados">Destacados:</label>
+                    <input type="checkbox" id="destacados" name="destacados" className='destacados' />
                 </div>
                 <div className="form-group">
                     <label htmlFor="price">Precio:</label>
@@ -143,14 +147,9 @@ export const Admin = () => {
                     <input type="text" id="descripcion" name="descripcion" />
                     <label htmlFor="category">Categoría:</label>
                     <select name="category" id="category" required value={category} onChange={handleCategory}>
-                        <option value="mates">Mates</option>
-                        <option value="yerbas">Yerbas</option>
-                        <option value="termos">Termos</option>
-                        <option value="bombillas">Bombillas</option>
-                        <option value="materas">Materas</option>
-                        <option value="vasos">Vasos</option>
-                        <option value="accesorios">Accesorios</option>
-                        <option value="combos">Combos</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="unisex">Unisex</option>
                     </select>
                 </div>
                 {[1, 2, 3, 4].map((num) => (
