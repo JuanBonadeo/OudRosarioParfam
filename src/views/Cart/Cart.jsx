@@ -65,8 +65,13 @@ export const Cart = () => {
                     <p>{prod.quantity}</p>
                     <button onClick={() => updateQuantity(prod.id, +1)}>+</button>
                   </div>
+                  { prod.descuento !== 0 && 
+                  <>
+                  <p className='price2'>{formatearMoneda(prod.precio * prod.quantity)}</p>
+                  <span className='discountedPrice'>{calcularDescuento(prod.precio * prod.quantity, prod.descuento)}</span></>
+                  }
                   <p className='price'>{formatearMoneda(prod.precio * prod.quantity)}</p>
-                  <span className='discountedPrice'>{calcularDescuento(prod.precio * prod.quantity, prod.descuento)}</span>
+                  
                   <DeleteOutlineIcon className='delete' onClick={() => removeItem(prod.id)}></DeleteOutlineIcon>
                 </div>
               </motion.div>

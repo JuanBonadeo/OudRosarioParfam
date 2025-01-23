@@ -50,14 +50,14 @@ export const ProductInfo = ({ id, nombre, precio, img1, img2, img3, descripcion,
               <h5>
                 <span className="discountedPrice">{nuevoPrecio}</span>
                 &nbsp;
-                <span className="price">{formatearMoneda(precio)}</span>
+                <span className="price2">{formatearMoneda(precio)}</span>
 
               </h5>
             </div>
           )}
           {descuento === 0 && (
             <div className="priceAddto">
-              <h5>Precio: {formatearMoneda(precio)}</h5>
+              <h5 className='priceInfo'>Precio: {formatearMoneda(precio)}</h5>
 
             </div>
           )}

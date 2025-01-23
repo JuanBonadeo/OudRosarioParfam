@@ -78,8 +78,7 @@
 }.paymentItem span{
     margin-bottom: .4em;
 }
-.price{
-    text-decoration: line-through;
+.priceInfo{
     font-size: 1em;
 }
 .discountedPrice{

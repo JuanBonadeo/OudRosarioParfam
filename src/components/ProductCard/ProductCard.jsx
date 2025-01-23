@@ -35,7 +35,7 @@ export const ProductCard = ({ nombre, img1, precio, id, descuento = 0, stock }) 
               &nbsp;
               |
               &nbsp;
-              <span className='price'>{formatearMoneda(precio)}</span>
+              <span className='price2'>{formatearMoneda(precio)}</span>
             </div>
           </div>
           { stock && <AddToCartIcon onAdd={handleOnAdd} /> }
