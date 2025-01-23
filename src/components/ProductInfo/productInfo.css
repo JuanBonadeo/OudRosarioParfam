@@ -97,7 +97,9 @@
     margin-bottom: .5em;
 }
 
-
+.carousel-control-next {
+    background-color: #000;
+}
 
 
 @media (max-width: 1200px){

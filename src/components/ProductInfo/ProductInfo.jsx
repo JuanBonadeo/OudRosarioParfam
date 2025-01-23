@@ -85,7 +85,7 @@ export const ProductInfo = ({ id, nombre, precio, img1, img2, img3, descripcion,
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut", delay: 0.6, type: "tween" }}>
-          <Carousel activeIndex={index} onSelect={handleSelect} className='carouselContainer'>
+          <Carousel activeIndex={index} onSelect={handleSelect} className='carouselContainer' variant='dark'>
             {img1 && (
               <Carousel.Item interval={10000}>
                 <img className="infoImg" src={img1} alt="Product" />
