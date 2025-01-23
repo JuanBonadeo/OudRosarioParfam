@@ -1,6 +1,6 @@
 .productInfoContainer{
     height: 100vh;
-    width: 70%;
+    width: 80%;
     margin: 1em  auto;
     display: flex;
     flex-direction: row;
@@ -11,6 +11,13 @@
     border-bottom: 1px solid #222
     ;
     padding: 2em 0;
+}
+.productInfoContainer h2{
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: .5em;
+    text-align: center;
+    color: #E3B442;
 }
 .productInfoContainer h5{
     font-size: 1.3em;
