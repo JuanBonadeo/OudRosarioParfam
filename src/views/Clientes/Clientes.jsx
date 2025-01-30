@@ -5,7 +5,9 @@ const fotos = [
     "https://res.cloudinary.com/do36rxfoe/image/upload/v1737565893/xprso7hwjqhqwxpmpo6b.jpg",
     "https://res.cloudinary.com/do36rxfoe/image/upload/v1737740378/tzpi8mnwbnko3okvdatt.jpg",
     "https://res.cloudinary.com/do36rxfoe/image/upload/v1737740378/cizkpdl26tw4tr94yi3l.jpg",
-    "https://res.cloudinary.com/do36rxfoe/image/upload/v1737740379/qtncsg5plzvfqckhgusm.jpg"
+    "https://res.cloudinary.com/do36rxfoe/image/upload/v1737740379/qtncsg5plzvfqckhgusm.jpg",
+    "https://res.cloudinary.com/do36rxfoe/image/upload/v1738251404/tm0pqkti72zjkdreb5cf.jpg",
+    "https://res.cloudinary.com/do36rxfoe/image/upload/v1738251403/uhb3rit7tparq3odjyyp.jpg"
   ,
 
 ];

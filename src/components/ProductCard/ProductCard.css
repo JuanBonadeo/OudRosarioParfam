@@ -69,17 +69,18 @@
     background-color: #fff;
     filter: opacity(.4);
     transition: all .4s ease-in-out;
+    
 
 }.outOfStock:hover{
     filter: opacity(.7);
 }
 .outOfStockBadge{
     position: absolute;
-    margin-top: 5em;
     color: #fff;
     font-size: 2em;
     font-weight: 700;
     cursor: pointer;
+    margin-top: 4em;
 }
 
 
@@ -100,6 +101,17 @@
         font-size: 1em;
         font-weight: 500;
     }
+    .outOfStockBadge{
+        margin-top: 3em;
+        font-size: 1.5em;
+    }
     
+}
+
+@media screen and (max-width: 425px) {
+    outOfStockBadge{
+        margin-top: 3em;
+        font-size: 1em;
+    }
     
 }
