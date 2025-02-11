@@ -31,6 +31,7 @@ export const  NavBar = () => {
             <NavLink to='/categoria/hombre' className={({ isActive }) => `primary ${isActive ? 'isActive' : "desactive"}`} >Hombre</NavLink>
             <NavLink to="/categoria/mujer" className={({ isActive }) => `primary ${isActive ? 'isActive' : "desactive"}`} onClick={closeNavbar}>Mujer</NavLink>
             <NavLink to="/categoria/unisex" className={({ isActive }) => `primary ${isActive ? 'isActive' : "desactive"}`} onClick={closeNavbar}>Unisex</NavLink>
+            <NavLink to="/categoria/bodysplash" className={({ isActive }) => `primary ${isActive ? 'isActive' : "desactive"}`} onClick={closeNavbar}>Body Splash</NavLink>
     
           </Nav>
         </Navbar.Collapse>

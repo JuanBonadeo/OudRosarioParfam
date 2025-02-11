@@ -150,6 +150,7 @@ export const Admin = () => {
                             <option value="hombre">Hombre</option>
                             <option value="mujer">Mujer</option>
                             <option value="unisex">Unisex</option>
+                            <option value="bodysplash">Body Splash</option>
                         </select>
                     </div>
 

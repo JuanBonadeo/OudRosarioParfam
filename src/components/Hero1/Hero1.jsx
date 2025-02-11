@@ -22,7 +22,6 @@ export const Hero1 = () => {
           alt="First-slide"
         />
         <Carousel.Caption className='HeroCaption hero12'>
-
         </Carousel.Caption>
       </Carousel.Item>
       {/* <Carousel.Item className='Hero1Container'>
