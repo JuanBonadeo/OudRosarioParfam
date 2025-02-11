@@ -55,21 +55,9 @@ export const ProductsContainer = () => {
       initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 2, type: "spring", stiffness: 160, damping: 20 }}
     >No hay productos disponibles</motion.h1>
   }
-  if (categoriaId) {
-    return (
-      <>
-        <motion.div className='h1Order h1OrderCategory' initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 2, type: "spring", stiffness: 160, damping: 20 }}>
-          <h1>Perfumes {categoriaId}</h1>
-          <OrderList handleOrderChange={handleOrderChange} />
-        </motion.div>
-        <ProductList products={products} orderBy={orderBy} />
-      </>
-    )
-  }
   return (
     <>
       <motion.div className='h1Order' initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 2, type: "spring", stiffness: 160, damping: 20 }}>
-        <h1>Nuestros Perfumes</h1>
         <OrderList handleOrderChange={handleOrderChange} />
       </motion.div>
       <ProductList products={products} orderBy={orderBy} />

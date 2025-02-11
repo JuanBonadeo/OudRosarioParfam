@@ -18,7 +18,7 @@
 }
 .h1Order{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr;
     width: 80%;
     margin: 0 auto;
     margin-top: 3em;
@@ -38,9 +38,7 @@
     font-size: 3em;
     color: #fff;
 }
-.h1Order *{
-    margin-top: 1em;
-}
+
 
 @media screen and (max-width: 768px){
     .h1Order{

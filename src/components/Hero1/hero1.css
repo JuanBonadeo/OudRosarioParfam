@@ -1,7 +1,7 @@
 .Hero1Container{
     height: auto;
     width: 100%;
-    margin: 0 auto;
+    margin: 3em auto;
 }
 .HeroCaption{
     display: flex;
@@ -9,10 +9,12 @@
     gap: 2em
 }
 .imgHero1{
+    display: flex;
     object-fit: contain;
     object-position: center;
     margin: 0 auto;
     width: 100%;
+    max-width: 1200px;
 }
 
 .hero12{
@@ -23,7 +25,9 @@
 
 
 @media (max-width: 1200px ){
-    
+    .Hero1Container{
+        margin: 0 auto;
+    }
     .hero3{
         top: 300px;
         margin-left: 43%;

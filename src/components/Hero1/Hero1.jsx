@@ -5,7 +5,7 @@ import { Button } from '../../ui/';
 
 export const Hero1 = () => {
   return (
-    <Carousel interval={5000}>
+    <Carousel interval={3000}>
       <Carousel.Item className='Hero1Container'>
         <img
           className="imgHero1"
