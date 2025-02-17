@@ -17,7 +17,7 @@ export const  NavBar = () => {
   const closeNavbar = () => setExpanded(false);
 
   return (
-    <Navbar expand="xl" className="navBar dark fixed-top" data-bs-theme="light" expanded={expanded}>
+    <Navbar expand="xl" className="navBar dark fixed-top custom-navbar" data-bs-theme="light" expanded={expanded}>
       <Container className='mobileContainerNav'>
         <Logo className='logo'/>
         <div className="mobileContainerNavRight">
