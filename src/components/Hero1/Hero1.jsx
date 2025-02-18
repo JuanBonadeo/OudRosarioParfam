@@ -18,23 +18,28 @@ export const Hero1 = () => {
       <Carousel.Item className='Hero1Container'>
         <img
           className="imgHero1 imgHero3"
-          src='https://res.cloudinary.com/do36rxfoe/image/upload/v1739541486/nhyxupylwudtzvoauq8o.png'
+          src='https://res.cloudinary.com/do36rxfoe/image/upload/v1739899357/btvlm8qa2hvnvopzzdfr.png'
           alt="First-slide"
         />
         <Carousel.Caption className='HeroCaption hero12'>
-          <Button label={'Ver colección'}  to='/categoria/decants'/>
+          <Button label={'Ver más'}  to='/categoria/bodysplash'/>
         </Carousel.Caption>
       </Carousel.Item>
-      {/* <Carousel.Item className='Hero1Container'>
+
+      <Carousel.Item className='Hero1Container'>
         <img
           className="imgHero1 imgHero3"
-          src='https://firebasestorage.googleapis.com/v0/b/mateardi-d8f70.appspot.com/o/slider3.png?alt=media&token=8ebc3b73-b411-4dfd-97a7-a24bb3bf7f4b'
-          alt="Third-slide"
+          src='https://res.cloudinary.com/do36rxfoe/image/upload/v1739899356/sgxnniosx9n6vgvfqi2b.png'
+          alt="First-slide"
         />
         <Carousel.Caption className='HeroCaption hero12'>
-
+          <Button label={'Ver más'}  to='/categoria/decants'/>
         </Carousel.Caption>
-      </Carousel.Item> */}
+      </Carousel.Item>
+
+
+
+    
     </Carousel>
   );
 }
