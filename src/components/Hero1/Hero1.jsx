@@ -29,7 +29,7 @@ export const Hero1 = () => {
       <Carousel.Item className='Hero1Container'>
         <img
           className="imgHero1 imgHero3"
-          src='https://res.cloudinary.com/do36rxfoe/image/upload/v1739899356/sgxnniosx9n6vgvfqi2b.png'
+          src='https://res.cloudinary.com/do36rxfoe/image/upload/v1739899635/tvaehj1afwkmd9h46new.png'
           alt="First-slide"
         />
         <Carousel.Caption className='HeroCaption hero12'>
