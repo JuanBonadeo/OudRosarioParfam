@@ -48,7 +48,6 @@ export const FinishPurchase = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 let mensajePedido = 'Nombre y Apellido: ' + nombre + '\n';
-                mensajePedido += 'Metodo de Pago: ' + pago + '\n';
                 mensajePedido += 'Domicilio: ' + domicilio + '\n';
                 mensajePedido += 'Costo de envio: ' + formatearMoneda(precioEnvio) + '\n';
                 
