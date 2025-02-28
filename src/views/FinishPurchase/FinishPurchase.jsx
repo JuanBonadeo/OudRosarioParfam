@@ -15,20 +15,12 @@ export const FinishPurchase = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    const [entrega, setEntrega] = useState('envio');
+    
     total = total - (total * descuentoCodigo);
     let [totalFinal, setTotalFinal] = useState(total);
 
 
-    const handleChange = (event) => {
-        const selectedOption = event.target.value;
-        setEntrega(selectedOption);
-        if (selectedOption === 'envio') {
-            setTotalFinal(total + precioEnvio);
-        } else {
-            setTotalFinal(total);
-        }
-    };
+    
 
     const handlePagoChange = (event) => {
         const selectedOption = event.target.value;
@@ -43,10 +35,9 @@ export const FinishPurchase = () => {
 
     const buyCart = (e) => {
         const nombre = document.getElementById('name').value;
-        const pago = document.getElementById('payment').value;
         const domicilio = document.getElementById('address').value;
         e.preventDefault();
-        let precioEnvio = 4500
+        let precioEnvio = 2500
         Swal.fire({
             title: 'Confirmar compra',
             text: '¿Estás seguro de que deseas realizar la compra? Seras redirigido a WhatsApp para completar la compra.',
@@ -58,16 +49,14 @@ export const FinishPurchase = () => {
             if (result.isConfirmed) {
                 let mensajePedido = 'Nombre y Apellido: ' + nombre + '\n';
                 mensajePedido += 'Metodo de Pago: ' + pago + '\n';
-                mensajePedido += 'Metodo de Entrega: ' + entrega + '\n';
-                if (entrega === 'envio') {
-                    mensajePedido += 'Domicilio: ' + domicilio + '\n';
-                    mensajePedido += 'Costo de envio: ' + formatearMoneda(precioEnvio) + '\n';
-                }
+                mensajePedido += 'Domicilio: ' + domicilio + '\n';
+                mensajePedido += 'Costo de envio: ' + formatearMoneda(precioEnvio) + '\n';
+                
                 mensajePedido += 'pedido:\n';
                 cart.forEach((prod) => {
                     mensajePedido += `*${prod.nombre}*  Cantidad: *${prod.quantity}* Precio: *${calcularDescuento(prod.precio * prod.quantity, prod.descuento)}*\n`;
                 });
-                 mensajePedido += `\nTotal: *${formatearMoneda(totalFinal) }*`;
+                 mensajePedido += `\nTotal: *${formatearMoneda(total + precioEnvio) }*`;
 
                 // Completar con el número de WhatsApp
                 const numeroWhatsApp = '5493416845002';
@@ -112,20 +101,8 @@ export const FinishPurchase = () => {
                         <label htmlFor="name">Nombre y Apellido:</label>
                         <input type="text" id="name" name="name" required />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor='payment'>Método de Pago:</label>
-                        <select name="payment" id="payment" className='select' required onChange={handlePagoChange}>
-                            <option value="transferencia">Transf. Bancaria</option>
-                            <option value="efectivo">Efectivo</option>
-                        </select>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor='entrega'>Método de Entrega</label>
-                        <select name="entrega" id="entrega" className='select' required value={entrega} onChange={handleChange} >
-                            <option value="envio">Envío a Domicilio</option>
-                            <option value="retiro">Retiro en Local</option>
-                        </select>
-                    </div>
+
+                
                     <div className="form-group">
                         <label htmlFor="address">Domicilio:</label>
                         <input type="text" id="address" name="address" required />
