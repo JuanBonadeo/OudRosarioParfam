@@ -19,9 +19,19 @@
   
   .marcaLogo {
     max-width: 100%;
-    height: auto;
+    height: 20em;
     object-fit: contain;
     transition: transform 0.5s;
+  }
+  @media (max-width: 768px) {
+    .marcaLogo {
+      height: 15em;
+    }
+  }
+  @media (max-width: 576px) {
+    .marcaLogo {
+      height: 10em;
+    }
   }
   .marcaLogo:hover {
     transform: scale(1.05);

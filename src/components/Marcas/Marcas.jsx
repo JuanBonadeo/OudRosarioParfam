@@ -49,6 +49,7 @@ export const Marcas = () => {
     { id: 3, name: "Marca 3", logo: "marca3.png" },
     { id: 4, name: "Marca 4", logo: "marca4.png" },
     { id: 5, name: "Marca 5", logo: "marca5.png" },
+    { id: 6, name: "Marca 6", logo: "marca6.png" },
 
   ];
 

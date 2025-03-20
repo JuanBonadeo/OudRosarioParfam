@@ -22,14 +22,7 @@ export const FinishPurchase = () => {
 
     
 
-    const handlePagoChange = (event) => {
-        const selectedOption = event.target.value;
-        if (selectedOption === 'credito') {
-            setTotalFinal(total  * 1.2);
-        } else{
-            setTotalFinal(total);
-        }
-    };
+   
    
     
 
@@ -108,7 +101,7 @@ export const FinishPurchase = () => {
                     </div>
                 </div>
                 {descuentoCodigo > 0 && <h4>Descuento por codigo del {descuentoCodigo * 100}%</h4>}
-                <h4>Total: &nbsp;{formatearMoneda(totalFinal)}</h4>
+                <h4>Total: &nbsp;{formatearMoneda(total)} + {formatearMoneda(precioEnvio)}</h4>
                 <p>Hacemos envios por todo Rosario y Funes.</p>
                 <button className="Button" type='submit'>Comprar</button>
             </form>
