@@ -18,7 +18,7 @@ export const FinishPurchase = () => {
     
     total = total - (total * descuentoCodigo);
     let [totalFinal, setTotalFinal] = useState(total);
-
+    
 
     
 
@@ -30,7 +30,6 @@ export const FinishPurchase = () => {
         const nombre = document.getElementById('name').value;
         const domicilio = document.getElementById('address').value;
         e.preventDefault();
-        let precioEnvio = 2500
         Swal.fire({
             title: 'Confirmar compra',
             text: '¿Estás seguro de que deseas realizar la compra? Seras redirigido a WhatsApp para completar la compra.',
@@ -42,13 +41,13 @@ export const FinishPurchase = () => {
             if (result.isConfirmed) {
                 let mensajePedido = 'Nombre y Apellido: ' + nombre + '\n';
                 mensajePedido += 'Domicilio: ' + domicilio + '\n';
-                mensajePedido += 'Costo de envio: ' + formatearMoneda(precioEnvio) + '\n';
+               
                 
                 mensajePedido += 'pedido:\n';
                 cart.forEach((prod) => {
                     mensajePedido += `*${prod.nombre}*  Cantidad: *${prod.quantity}* Precio: *${calcularDescuento(prod.precio * prod.quantity, prod.descuento)}*\n`;
                 });
-                 mensajePedido += `\nTotal: *${formatearMoneda(total + precioEnvio) }*`;
+                 mensajePedido += `\nTotal: *${formatearMoneda(total ) }*`;
 
                 // Completar con el número de WhatsApp
                 const numeroWhatsApp = '5493416845002';
@@ -101,7 +100,7 @@ export const FinishPurchase = () => {
                     </div>
                 </div>
                 {descuentoCodigo > 0 && <h4>Descuento por codigo del {descuentoCodigo * 100}%</h4>}
-                <h4>Total: &nbsp;{formatearMoneda(total)} + {formatearMoneda(precioEnvio)}</h4>
+                <h4>Total: &nbsp;{formatearMoneda(total)} </h4>
                 <p>Hacemos envios por todo Rosario y Funes.</p>
                 <button className="Button" type='submit'>Comprar</button>
             </form>
