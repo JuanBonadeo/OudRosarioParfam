@@ -21,7 +21,7 @@ export const buyCart = (e) => {
             mensajePedido += 'Metodo de Entrega: ' + entrega + '\n';
             if (entrega === 'envio') {
                 mensajePedido += 'Domicilio: ' + domicilio + '\n';
-                mensajePedido += 'Costo de envio: ' + formatearMoneda(precioEnvio) + ' (envio gratis a partir de 30000)\n';
+                mensajePedido += 'Costo de envio: ' + formatearMoneda(precioEnvio) + '\n';
                 totalFinal = total + precioEnvio;
             }
             mensajePedido += 'pedido:\n';

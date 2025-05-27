@@ -18,7 +18,7 @@ export const FinishPurchase = () => {
     
     total = total - (total * descuentoCodigo);
     let [totalFinal, setTotalFinal] = useState(total);
-    
+    const envio = 3000 ; // Puedes ajustar el valor del envío si es necesario
 
     
 
@@ -47,8 +47,9 @@ export const FinishPurchase = () => {
                 cart.forEach((prod) => {
                     mensajePedido += `*${prod.nombre}*  Cantidad: *${prod.quantity}* Precio: *${calcularDescuento(prod.precio * prod.quantity, prod.descuento)}*\n`;
                 });
-                 mensajePedido += `\nTotal: *${formatearMoneda(total ) }*`;
-
+                 mensajePedido += `\nTotal: *${formatearMoneda(total)}* sin envio incluido`;
+                 mensajePedido += `\nPrecio de envio: *${formatearMoneda(envio)}*`;
+                mensajePedido += `\nTotal Final: *${formatearMoneda(total + envio)}*`;
                 // Completar con el número de WhatsApp
                 const numeroWhatsApp = '5493416845002';
 
@@ -100,8 +101,8 @@ export const FinishPurchase = () => {
                     </div>
                 </div>
                 {descuentoCodigo > 0 && <h4>Descuento por codigo del {descuentoCodigo * 100}%</h4>}
-                <h4>Total: &nbsp;{formatearMoneda(total)} </h4>
-                <p>Hacemos envios por todo Rosario y Funes.</p>
+                <h4>Total: &nbsp;{formatearMoneda(totalFinal)} </h4>
+                <p>Hacemos envios por todo Rosario y Funes a { formatearMoneda(totalFinal)}. </p>
                 <button className="Button" type='submit'>Comprar</button>
             </form>
             
