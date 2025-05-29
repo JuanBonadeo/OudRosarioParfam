@@ -74,7 +74,7 @@ export const ProductInfo = ({ id, nombre, precio, img1, img2, img3, descripcion,
               <div className="paymentItem"><LocalAtmIcon /><span>Efectivo</span></div>
             </div>
           </div> */}
-          <div className="envios"><h5>Envio <b>Gratis</b> por Rosario y Funes </h5><LocalShippingIcon /></div>
+          <div className="envios"><h5>Envio <b>$3.000</b> por Rosario y Funes </h5><LocalShippingIcon /></div>
           
 
 
