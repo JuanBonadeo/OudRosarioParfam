@@ -102,7 +102,7 @@ export const FinishPurchase = () => {
                 </div>
                 {descuentoCodigo > 0 && <h4>Descuento por codigo del {descuentoCodigo * 100}%</h4>}
                 <h4>Total: &nbsp;{formatearMoneda(totalFinal)} </h4>
-                <p>Hacemos envios por todo Rosario y Funes a { formatearMoneda(totalFinal)}. </p>
+                <p>Hacemos envios por todo Rosario y Funes a{ formatearMoneda(envio)}. </p>
                 <button className="Button" type='submit'>Comprar</button>
             </form>
             
