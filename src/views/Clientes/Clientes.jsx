@@ -12,10 +12,11 @@ const fotos = [
     "https://res.cloudinary.com/do36rxfoe/image/upload/v1747396859/zbukd89fo7k1fl65prlw.jpg",
     "https://res.cloudinary.com/do36rxfoe/image/upload/v1747396856/m0jagriapm6htvcaizrq.jpg",
     "https://res.cloudinary.com/do36rxfoe/image/upload/v1747396856/tf1cjxx4anejck8wfcwv.jpg",
-    "https://res.cloudinary.com/do36rxfoe/image/upload/v1747396832/e9em35kglbytru22ijp9.jpg"
-  ,
+    "https://res.cloudinary.com/do36rxfoe/image/upload/v1747396832/e9em35kglbytru22ijp9.jpg",
+    "https://res.cloudinary.com/do36rxfoe/image/upload/v1751306413/uppi2uweiotteynsumkh.jpg",
 
 ];
+
 export const Clientes = () => {
   return (
     <div sx={{ padding: '20px' }}>
