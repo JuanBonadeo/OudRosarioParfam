@@ -151,7 +151,7 @@ export const Admin = () => {
                             <option value="mujer">Mujer</option>
                             <option value="unisex">Unisex</option>
                             <option value="bodysplash">Body Splash</option>
-                            <option value="decants">Decants</option>
+                            {/* <option value="decants">Decants</option> */}
                         </select>
                     </div>
 

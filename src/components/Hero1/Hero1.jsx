@@ -26,7 +26,7 @@ export const Hero1 = () => {
         </Carousel.Caption>
       </Carousel.Item>
 
-      <Carousel.Item className='Hero1Container'>
+      {/* <Carousel.Item className='Hero1Container'>
         <img
           className="imgHero1 imgHero3"
           src='https://res.cloudinary.com/do36rxfoe/image/upload/v1740143070/jqfpddwwysjceiucfd2q.png'
@@ -35,7 +35,7 @@ export const Hero1 = () => {
         <Carousel.Caption className='HeroCaption hero12'>
           <Button label={'Ver más'}  to='/categoria/decants'/>
         </Carousel.Caption>
-      </Carousel.Item>
+      </Carousel.Item> */}
 
 
 
